@@ -9,11 +9,11 @@ class Corpus:
 
         data = pd.read_csv(filepath)
         documents = data["text"].tolist()
-        topics = data["topic"].tolist()
+        tags = data["tags"].tolist()
 
         for index in range(len(documents)):
             try:
-                self.__documents.append(Document(documents[index], topics[index]))  # add item after last item
+                self.__documents.append(Document(documents[index], tags[index]))  # add item after last item
             except IndexError:
                 self.__documents.append(Document(documents[index], ''))
 
