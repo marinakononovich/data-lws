@@ -7,10 +7,6 @@ class Normalizer:
     morphAnalyzer = pymorphy2.MorphAnalyzer()
 
     @staticmethod
-    def text_to_list(text):
-        return re.sub("[^\w]", " ", text).split()
-
-    @staticmethod
     def document_to_list(document):
         return re.sub("[^\w]", " ", document.get_text()).split()
 
