@@ -66,7 +66,8 @@ class LDA:
                 c += numpy.log(l)
 
         per = numpy.exp(-c / b)
-        # print('per:', per)
+        print('per:', per+87)
+
 
     def worddist(self):
         return self.__phi
